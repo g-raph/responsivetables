@@ -1,0 +1,134 @@
+body {
+  background: #eee;
+  font: 14px arial;
+  font-weight: normal;
+}
+
+h1 {
+  width: 100%;
+  max-width: 960px;
+  margin: 30px auto;
+  text-align: center;
+  font: 30px arial;
+  font-weight: normal;
+}
+
+#container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.mobiletable {
+  display: none;
+}
+
+table {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+table th {
+  background: #ccc;
+  padding: 5px 10px;
+}
+
+table tbody tr td {
+  padding: 5px 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+@media screen and (max-width: 800px) {
+
+  .mobiletable {
+    display: block;
+  }
+
+  .mobiletable .row {
+    display: block;
+    width: 90%;
+    padding: 0;
+    margin: 0 5% 15px;
+    border: 1px solid #ccc;
+    border-top: 20px solid #ccc;
+  }
+  .mobiletable .row:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  .mobiletable .row .left {
+    width: 35%;
+    float: left;
+  }
+  .mobiletable .row .left tr {
+    background: none;
+    width: 100%;
+    float: left;
+    border-right: 1px solid #ccc;
+  }
+  .mobiletable .row .left tr th {
+    display: block;
+    vertical-align: middle;
+    width: 90%;
+    height: 35px;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 5% 5px;
+    text-align: left;
+    font-weight: normal;
+  }
+  .mobiletable .row .left tr th:last-child {
+    border: 0;
+  }
+  .mobiletable .row .right {
+    width: 65%;
+    float: right;
+  }
+  .mobiletable .row .right tr {
+    background: none;
+    width: 100%;
+    float: left;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  .mobiletable .row .right tr td {
+    display: block;
+    vertical-align: middle;
+    width: 90%;
+    height: 35px;
+    padding: 15px 5% 5px;
+    border-bottom: 1px solid #ccc;
+  }
+  .mobiletable .row .right tr td:last-child {
+    border: 0;
+  }
+  .mobiletable .row .right tr td:last-child a {
+    position: relative;
+    padding-left: 35px;
+  }
+  .mobiletable .row .right tr td:last-child a img {
+    position: absolute;
+    left: 0;
+    top: -7px;
+  }
+
+  table {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+
+  .mobiletable .row .left tr th {
+    height: 50px;
+  }
+  .mobiletable .row .right tr td {
+    height: 50px;
+  }
+
+}
